@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KMeans Clustering</title>
+</head>
+<body>
+    <h1>KMeans Clustering Visualization</h1>
+    
+    <form method="POST">
+        <button name="generate">Generate New Data</button>
+        <br><br>
+
+        <label for="num-clusters">Number of Clusters:</label>
+        <input type="number" name="num-clusters" value="2" min="1" required>
+        <br><br>
+
+        <label for="init-method">Initialization Method:</label>
+        <select name="init-method">
+            <option value="random">Random</option>
+            <option value="farthest_first">Farthest First</option>
+            <option value="kmeans++">KMeans++</option>
+        </select>
+        <br><br>
+
+        <button name="run_to_convergence">Run to Convergence</button>
+        <button name="step">Step Through KMeans</button>
+        <button name="reset">Reset Algorithm</button>
+    </form>
+
+    <div>
+        {{ graph|safe }}
+    </div>
+
+    <script>
+        // Optional: You can include additional JavaScript for interactivity
+    </script>
+</body>
+</html>

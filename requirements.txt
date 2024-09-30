@@ -1,0 +1,4 @@
+Flask
+matplotlib
+mpld3
+numpy
